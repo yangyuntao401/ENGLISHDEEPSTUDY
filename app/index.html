@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7f4">
+  <title>DeepStudy · 从文章开始学英语</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="#home"><span class="brand-mark">D</span><span>DeepStudy</span></a><nav><a href="#home" data-route="home">学习</a><a href="#library" data-route="library">文章库</a><a href="#grammar" data-route="grammar">语法</a><a href="#settings" data-route="settings">数据与来源</a></nav><button id="importTop" class="quiet">＋ 导入文章</button></header>
+  <main id="app" tabindex="-1"></main>
+  <dialog id="importDialog"><form method="dialog" id="importForm"><div class="dialog-head"><div><p class="eyebrow">建立可追溯的学习材料</p><h2>导入一篇文章</h2></div><button value="cancel" class="quiet" aria-label="关闭">✕</button></div><label>文章标题<input name="title" required placeholder="例如：Why do leaves change color?"></label><div class="two"><label>作者或贡献者<input name="author" placeholder="个人作者 / Wikipedia contributors"></label><label>来源名称<input name="source" required placeholder="Wikisource / 自行撰写"></label></div><div class="two"><label>来源链接<input name="url" type="url" placeholder="https://…"></label><label>许可或使用依据<input name="license" required placeholder="CC BY-SA 4.0 / Public domain（地区待核）"></label></div><label>内容类型<select name="kind"><option value="article">文章</option><option value="dialogue">对话</option><option value="literature">文学</option><option value="technology">科技</option><option value="blog">博客</option></select></label><label>英文原文<textarea name="text" required rows="9" placeholder="粘贴已获准使用的英文原文。段落会按句子拆分；标点与原文保留。"></textarea></label><p class="note">导入后系统会提取全部词形。普通词进入单词学习；冠词、介词、助动词等功能词进入语法学习。每篇材料会显示作者、来源与许可信息。</p><div class="dialog-actions"><button value="cancel" class="secondary">取消</button><button id="saveArticle" value="default" class="primary">分析并加入文章库</button></div></form></dialog>
+  <script src="seed-data.js?v=20261121-b"></script>
+  <script src="app.js?v=20261121-b"></script>
+</body>
+</html>
